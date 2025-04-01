@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>अतिथि EVENT</title>
+    <link rel="shortcut icon" href="अतिथि.png" type="image/x-icon" />
+    <script src="./node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script>
+      // Burger menus
+      document.addEventListener("DOMContentLoaded", function () {
+        // open
+        const burger = document.querySelectorAll(".navbar-burger");
+        const menu = document.querySelectorAll(".navbar-menu");
+
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        // close
+        const close = document.querySelectorAll(".navbar-close");
+        const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!-- NAVBAR COMPONENT -->
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+      <img class="w-16 rounded-full" src="अतिथि.png" alt="ATITHI EVENT" />
+      <a href="index.html" class="flex items-center">
+        &nbsp; &nbsp;&nbsp;
+        <span
+          class="self-center whitespace-nowrap text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+          >अतिथि EVENT</span
+        >
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-blue-600 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <a
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+        href="index.html"
+        >HOME</a
+      >
+      &nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#"
+        >ABOUT</a
+      >&nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#"
+        >SERVICE</a
+      >
+      &nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="contact.html"
+        >CONTACT</a
+      >
+      <!-- <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a> -->
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
+        <div class="flex items-center mb-8">
+          <img class="w-16" src="अतिथि.png" alt="ATITHI EVENT" />
+          &nbsp;&nbsp;&nbsp;
+          <a href="index.html" class="flex items-center">
+            <span
+              class="self-center whitespace-nowrap text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+              >अतिथि EVENT</span
+            >
+          </a>
+          &nbsp;&nbsp;
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="index.html"
+                >HOME</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >ABOUT</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >SERVICES</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="contact.html"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <!-- <div class="pt-6">
+              <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
+              <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+            </div> -->
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span>Copyright © 2025</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Growing component  -->
+    <section class="relative pt-12 pb-12 bg-blueGray-50">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+          <img
+            alt="..."
+            class="max-w-full rounded-lg shadow-lg"
+            src="https://135street.com/wp-content/uploads/2021/02/event-organizer-in-jakarta-indonesia.jpg"
+          />
+        </div>
+        <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+          <div class="md:pr-12">
+            <!-- <div
+              class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300 mt-8"
+            >
+              <i class="fas fa-rocket text-xl"></i>
+            </div> -->
+            <h3 class="text-3xl font-semibold">A growing company</h3>
+            <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+              <quote
+                >“Good fortune is what happens when opportunity meets with
+                planning.” – Thomas Edison"</quote
+              >
+              <br />
+              <br />
+              <strong class="text-2xl text-orange-500">अतिथि EVENT</strong> is
+              an honor-winning event arranging and setting firm. Our full
+              services, all-the-way subtleties, and administrations make our
+              studio the ideal beginning for everything party style. <br />
+              For a long time, our capable, experienced group has aced
+              incalculable festivals – weddings, corporate occasions, birthday
+              celebrations, meals and that’s only the tip of the iceberg.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+
+    <!-- What we do  -->
+    <div
+      id="services"
+      class="section relative pt-8 pb-8 md:pt-16 md:pb-0 bg-white"
+    >
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- Heading start -->
+        <header class="text-center mx-auto mb-12 lg:px-20">
+          <h2 class="text-2xl leading-normal mb-2 font-bold text-pink-500">
+            What We Do
+          </h2>
+        </header>
+        <!-- End heading -->
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4 text-center">
+          <div
+            class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp"
+            data-wow-duration="1s"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-name: fadeInUp;
+            "
+          >
+            <!-- service block -->
+            <div
+              class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2"
+            >
+              <div class="inline-block text-gray-900 mb-4">
+                <!-- icon -->
+                <!-- <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2rem"
+                    height="2rem"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    ></path>
+                  </svg> -->
+                <a href="#corporate">
+                  <img
+                    width="64"
+                    height="64"
+                    src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-corporate-event-event-management-flaticons-lineal-color-flat-icons.png"
+                    alt="external-corporate-event-event-management-flaticons-lineal-color-flat-icons"
+                /></a>
+              </div>
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-black">
+                CORPORATE EVENT
+              </h3>
+            </div>
+            <!-- end service block -->
+          </div>
+          <div
+            class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay=".1s"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.1s;
+              animation-name: fadeInUp;
+            "
+          >
+            <!-- service block -->
+            <div
+              class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2"
+            >
+              <div class="inline-block text-gray-900 mb-4">
+                <!-- icon -->
+                <a href="#wedding">
+                  <img
+                    width="64"
+                    height="64"
+                    src="https://img.icons8.com/external-filled-outline-02-chattapat-/64/external-marriage-wedding-filled-outline-02-chattapat--2.png"
+                    alt="external-marriage-wedding-filled-outline-02-chattapat--2"
+                /></a>
+              </div>
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-black">
+                WEDDING EVENT
+              </h3>
+            </div>
+            <!-- end service block -->
+          </div>
+          <div
+            class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay=".3s"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            "
+          >
+            <!-- service block -->
+            <div
+              class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2"
+            >
+              <div class="inline-block text-gray-900 mb-4">
+                <!-- icon -->
+                <a href="#birthday">
+                  <img
+                    width="48"
+                    height="48"
+                    src="https://img.icons8.com/fluency/48/birthday.png"
+                    alt="birthday"
+                /></a>
+              </div>
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-black">
+                BIRTHDAY EVENT
+              </h3>
+            </div>
+            <!-- end service block -->
+          </div>
+          <div
+            class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp"
+            data-wow-duration="1s"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-name: fadeInUp;
+            "
+          >
+            <!-- service block -->
+            <div
+              class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2"
+            >
+              <div class="inline-block text-gray-900 mb-4">
+                <!-- icon -->
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/fluency/48/conference-foreground-selected--v1.png"
+                  alt="conference-foreground-selected--v1"
+                />
+              </div>
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-black">
+                SOCIAL EVENT
+              </h3>
+            </div>
+            <!-- end service block -->
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+    </div>
+
+    <!-- CORPORATE EVENT  -->
+    <div class="container my-1 px-6 mx-auto" id="corporate">
+      <!-- Section: Design Block -->
+      <section class="mb-20 text-gray-800">
+        <div class="block rounded-lg shadow-lg bg-white">
+          <div class="flex flex-wrap items-center">
+            <div
+              class="grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12"
+            >
+              <img
+                src="https://revenuesandprofits.com/wp-content/uploads/2020/12/Corporate-Event-1.jpg"
+                alt="CORPORATE EVENT"
+                class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              />
+            </div>
+            <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
+              <div class="px-6 py-12 md:px-12">
+                <h2 class="text-3xl font-bold mb-6 pb-2">CORPORATE EVENT</h2>
+
+                <div class="flex flex-wrap mb-6">
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Destination & venue selection.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Resort
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Seminars
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Hospitality.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Guest Support.
+                    </p>
+                  </div>
+
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Lunch party
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <a href="corporate.html"> KNOW MORE</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+
+    <!-- MARRIAGE EVENT  -->
+    <div class="container my-1 px-6 mx-auto" id="wedding">
+      <!-- Section: Design Block -->
+      <section class="mb-20 text-gray-800">
+        <div class="block rounded-lg shadow-lg bg-white">
+          <div class="flex flex-wrap items-center">
+            <div
+              class="grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12"
+            >
+              <img
+                src="https://i.pinimg.com/originals/17/15/52/17155210d397a0f542a1ca8f79644cc5.jpg"
+                alt="WEDDING EVENT"
+                class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              />
+            </div>
+            <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
+              <div class="px-6 py-12 md:px-12">
+                <h2 class="text-3xl font-bold mb-6 pb-2">Wedding Event</h2>
+
+                <div class="flex flex-wrap mb-6">
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Destination & venue selection.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Wedding venue decorations.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Hospitality.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Guest Support.
+                    </p>
+                  </div>
+
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Entertainment.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Pre-wedding celebrations.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <a href="wedding.html"> KNOW MORE</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+
+    <!-- BIRTHDAY EVENT  -->
+    <div class="container my-1 px-6 mx-auto" id="birthday">
+      <!-- Section: Design Block -->
+      <section class="mb-20 text-gray-800">
+        <div class="block rounded-lg shadow-lg bg-white">
+          <div class="flex flex-wrap items-center">
+            <div
+              class="grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12"
+            >
+              <img
+                src="https://i0.wp.com/timm.design/wp-content/uploads/2019/08/birthdaybg5.jpg?fit=1024%2C683"
+                alt="BIRTHDAY EVENT"
+                class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              />
+            </div>
+            <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
+              <div class="px-6 py-12 md:px-12">
+                <h2 class="text-3xl font-bold mb-6 pb-2">Birthday Event</h2>
+
+                <div class="flex flex-wrap mb-6">
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Destination & venue selection.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Venue decorations.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Birthday cake.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Games.
+                    </p>
+                  </div>
+
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Entertainment.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                    <p class="flex items-center">
+                      <svg
+                        class="w-4 h-4 mr-2 text-green-600"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                        ></path>
+                      </svg>
+                      Food.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <a href="birthday.html"> KNOW MORE</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+
+    <!-- STATS  -->
+    <div class="max-w-[85rem] px-4 py-0 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <!-- Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Icon Block -->
+        <div
+          class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700"
+        >
+          <!-- Icon -->
+          <div
+            class="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto"
+          >
+            <svg
+              class="w-7 h-7 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"
+              />
+              <path
+                d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"
+              />
+            </svg>
+          </div>
+          <!-- End Icon -->
+
+          <div class="mt-3">
+            <h3
+              class="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+            >
+              Creative minds
+            </h3>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div
+          class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700"
+        >
+          <!-- Icon -->
+          <div
+            class="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto"
+          >
+            <svg
+              class="w-7 h-7 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"
+              />
+            </svg>
+          </div>
+          <!-- End Icon -->
+
+          <div class="mt-3">
+            <h3
+              class="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+            >
+              Effortless updates
+            </h3>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div
+          class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700"
+        >
+          <!-- Icon -->
+          <div
+            class="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto"
+          >
+            <svg
+              class="w-7 h-7 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+              />
+            </svg>
+          </div>
+          <!-- End Icon -->
+
+          <div class="mt-3">
+            <h3
+              class="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+            >
+              Strong empathy
+            </h3>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div
+          class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700"
+        >
+          <!-- Icon -->
+          <div
+            class="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto"
+          >
+            <svg
+              class="w-7 h-7 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"
+              />
+            </svg>
+          </div>
+          <!-- End Icon -->
+
+          <div class="mt-3">
+            <h3
+              class="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+            >
+              Conquer the best
+            </h3>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div
+          class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700"
+        >
+          <!-- Icon -->
+          <div
+            class="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto"
+          >
+            <svg
+              class="w-7 h-7 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"
+              />
+            </svg>
+          </div>
+          <!-- End Icon -->
+
+          <div class="mt-3">
+            <h3
+              class="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+            >
+              Designing for people
+            </h3>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+
+        <!-- Icon Block -->
+        <div
+          class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700"
+        >
+          <!-- Icon -->
+          <div
+            class="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto"
+          >
+            <svg
+              class="w-7 h-7 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
+              />
+            </svg>
+          </div>
+          <!-- End Icon -->
+
+          <div class="mt-3">
+            <h3
+              class="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+            >
+              Simple and affordable
+            </h3>
+          </div>
+        </div>
+        <!-- End Icon Block -->
+      </div>
+      <!-- End Grid -->
+    </div>
+
+    <!-- NEW STATS -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-6 mx-auto">
+        <div class="flex flex-wrap w-full mb-8">
+          <div class="w-full mb-6 lg:mb-0">
+            <h1
+              class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900"
+            >
+              Statistics
+            </h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap -m-4 text-center">
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <div class="bg-indigo-500 rounded-lg p-2 xl:p-6">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-white"
+              >
+                40+
+              </h2>
+              <p class="leading-relaxed text-gray-100 font-bold">
+                Satisfied clients
+              </p>
+            </div>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <div class="bg-indigo-500 rounded-lg p-2 xl:p-6">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-white"
+              >
+                40+
+              </h2>
+              <p class="leading-relaxed text-gray-100 font-bold">Projects</p>
+            </div>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <div class="bg-indigo-500 rounded-lg p-2 xl:p-6">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-white"
+              >
+                20+
+              </h2>
+              <p class="leading-relaxed text-gray-100 font-bold">Teams</p>
+            </div>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <div class="bg-indigo-500 rounded-lg p-2 xl:p-6">
+              <h2
+                class="title-font font-medium sm:text-4xl text-3xl text-white"
+              >
+                8+
+              </h2>
+              <p class="leading-relaxed text-gray-100 font-bold">Locations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER  -->
+    <section class="bg-white">
+      <div
+        class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
+      >
+        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-teal-500 hover:text-pink-700 font-bold"
+            >
+              ABOUT
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-teal-500 hover:text-pink-700 font-bold"
+            >
+              SERVICES
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="contact.html"
+              class="text-base leading-6 text-teal-500 hover:text-pink-700 font-bold"
+            >
+              CONTACT
+            </a>
+          </div>
+        </nav>
+        <p class="mt-8 text-base leading-6 text-center text-red-400">
+          © 2025 अतिथि EVENT, Inc. All rights reserved.
+        </p>
+      </div>
+    </section>
+
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+  </body>
+</html>
